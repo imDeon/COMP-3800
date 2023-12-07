@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static', filename='styles.css') }}"
+  />
+</head>
+<body>
+     <h1>Credit Card Fraud Prediction</h1>
+     <form action="{{ url_for('predict')}}" method="post">
+         <input type='text' name="V3" placeholder="V3" required="required" />
+         <input type='text' name="V4" placeholder="V4" required="required" />
+         <input type='text' name="V9" placeholder="V9" required="required" />
+         <input type='text' name="V10" placeholder="V10" required="required" />
+         <input type='text' name="V11" placeholder="V11" required="required" />
+         <input type='text' name="V12" placeholder="V12" required="required" />
+         <input type='text' name="V14" placeholder="V14" required="required" />
+         <input type='text' name="V16" placeholder="V16" required="required" />
+         <input type='text' name="V17" placeholder="V17" required="required" />
+         <input type='text' name="V18" placeholder="V18" required="required" />
+         <input type='text' name="V19" placeholder="V19" required="required" />
+         <input type='text' name="Amount" placeholder="Amount" required="required" />
+         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+     </form>
+
+     <h2>The transaction status is: {{predicted_text}}</h2>
+</body>
+</html>
